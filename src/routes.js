@@ -1,0 +1,18 @@
+import React from "react";
+
+const Guests = React.lazy(() => import("./views/base/tables/Guests"));
+const Gift = React.lazy(() => import("./views/base/tables/Gift"));
+const Navbars = React.lazy(() => import("./views/base/navbars/Navbars"));
+const Navs = React.lazy(() => import("./views/base/navs/Navs"));
+const Dashboard = React.lazy(() => import("./views/dashboard/Dashboard"));
+
+const routes = [
+  { path: "/", exact: true, name: "Home" },
+  { path: "/dashboard", name: "Dashboard", component: Dashboard },
+  { path: "/base/navbars", name: "Navbars", component: Navbars },
+  { path: "/base/navs", name: "Navs", component: Navs },
+  { path: "/invitation/guests", name: "Tables", component: Guests },
+  { path: "/invitation/gift", name: "Tables", component: Gift },
+];
+
+export default routes;
